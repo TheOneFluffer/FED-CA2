@@ -1,11 +1,13 @@
 @charset "utf-8";
-.navbar-nav{
-    color: #ff59c7;
+#Navbar{
+    background-color: #ff59c7;
 }
+
 body{
     background-color: #ff59c7;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
+    /*overflow-x: hidden;*/
 }
 
 footer{
