@@ -7,7 +7,7 @@ body{
     background-color: #ff59c7;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
-    /*overflow-x: hidden;*/
+    font-size: large;
 }
 
 footer{
