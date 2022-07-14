@@ -8,11 +8,5 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: black;
     font-size: large;
-}
-
-footer{
-    margin-top: 10px;
-    background-color: #ff59c7;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: black;
+    /*overflow-x: hidden;*/
 }
