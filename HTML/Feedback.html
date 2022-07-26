@@ -45,44 +45,95 @@
     </nav>
 
 <!--Current Experience and Details-->   
-<div class="container">
+<div class="Feedback_Container">
     <div class="Intro row">
-        <div class="col-md-4 bg-dark">
-            <div class="container-fluid h3 text-center">&#9829; Choice 1: &#9829;</div>
-            <p class="text-center">&#9829; Red Team Ethical Hacker &#9829;</p>
-            <ul>
-                <li>Red teams are “ethical hackers” who <strong> help test an organization's defenses by identifying vulnerabilities and launching attacks in a controlled environment.</strong> Red teams are opposed by defenders called blue teams, and both parties work together to provide a comprehensive picture of <strong> organizational security readiness.</strong></li>
-            </ul>
+        <div class="col-md-12 bg-dark">
+            <label for="status"><b>Who are you:</b></label>
+            <select name="status" id="status">
+                <option value="student">student</option>
+                <option value="staff">Staff</option>
+                <option value="alumni">Alumni</option>
+            </select>
+            <br>
         </div>
 
-        <div class="col-md-4 bg-dark">
-            <div class="container-fluid h3 text-center">&#9829; Choice 2: &#9829;</div>
-            <p class="text-center">&#9829; Computer Forensics Analyst &#9829;</p>
-            <li>Computer forensics analysts <strong> assist in the investigation of crimes and cybersecurity incidents</strong>. Often, they recover hidden, encrypted, and deleted information for law enforcement agencies. They also follow chains of custody to safeguard the <strong> integrity of data</strong> and ensure its <strong>admissibility in court</strong>.</li>
+        <div class="col-md-12 bg-dark">
+            <br>
+            <label><b>Satisfaction (between 1 to 5):</b></label>
+            <br>
+            <input type="range" id="o-range" name="o-range" min="1" max="5" value="3">
         </div>
 
-        <div class="col-md-4 bg-dark">
-            <div class="container-fluid h3 text-center">&#9829; Choice 3: &#9829;</div>
-            <p class="text-center">&#9829; System Administrator &#9829;</p>
-            <ul>
-                <li>Sysadmins are responsible for managing, troubleshooting, licensing, and updating hardware and software assets. You will ensure that appropriate measures are proactively followed in response to unforeseen issues such as IT downtime or zero-day exploits.</li>
-            </ul>
+        <div class="col-md-12 bg-dark">
+            <br>
+            <label for="age"><b>Enter your age:</b></label>
+            <br>
+            <input type="number" id="age" placeholder="18" min="1">
+            <br>
+        </div>
+    
+        <br><br>
+
+        <div class="col-md-12 bg-dark">
+            <p><b>Please select your Gender:</b></p>
+            <input type="radio" id="male" name="gender" value="men">
+            <label for="male">Male</label>
+        <br>
+            <input type="radio" id="female" name="gender" value="women">
+            <label for="female">Female</label>
+        <br>
+            <input type="radio" id="others" name="gender" value="others">
+            <label for="others">Others</label>
         </div>
 
-        <div class="col-md-4 bg-dark">
-            <img src="../Images/Raspberrypizero.jpeg" width="350" height="250" alt="Source: https://www.electronics-lab.com/raspberry-pi-zero-wh-no-soldering-raspberry-pi-zero-w/">
-        </div>
+        <br><br>
 
-        <div class="col-md-4 bg-dark">
-            <img class="Cyber" src="../Images/Cyber.jpg" width="350" height="250"
-                alt="Source: https://technofaq.org/posts/2020/08/the-remote-workers-cybersecurity-handbook-for-2020/">
+        <div class="col-md-12 bg-dark">
+            <br>
+            <label for="email"><b>Email address:</b></label>
+        <br>
+            <input type="radio" id="female" name="gender" value="women">
+            <label for="female">Female</label>
+        <br>
+            <input type="radio" id="others" name="gender" value="others">
+            <label for="others">Others</label>
+            <br>
         </div>
+        
+        <br><br>
+        
+    <div>
+        
+    </div>
+    <div>
+        <input type="email" id="email" name="email address" placeholder="example@mail.com" style="width: 500px;">
+    </div>
 
-        <div class="col-md-4 bg-dark">
-            <img src="../Images/Raspberrypizero.jpeg" width="350" height="250" alt="Source: https://www.electronics-lab.com/raspberry-pi-zero-wh-no-soldering-raspberry-pi-zero-w/">
-        </div>
+    <br>
+
+    <div></div>
+
+    <div>
+        <label for="text"><b>Type in your feedback here:</b></label>
+    </div>
+    <br>
+    <div class="expandingArea" style="width: 1000px; height: 200px;">
+        <pre><span></span><br></pre>
+        <textarea placeholder="Please type in your feedback here."></textarea>
     </div>
 </div>
+<br>
+    <div class="Center">
+        <form><button onclick="Submission()" style="width: 250px;">Submit</button></form>
+    </div>
+
+
+<!--Programming the button to show a popup saying that the feedback form is submitted-->
+<script>
+    function Submission() {
+        alert("Your feedback form has been submitted!");
+    }
+</script>
 
     <!--Footer-->
     <footer class="container-fluid text-center bg-dark">FlufCorp2022&copy; &#9829; Singapore Poly &#9829; 88155466 &#9829;
