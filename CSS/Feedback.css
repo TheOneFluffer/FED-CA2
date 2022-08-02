@@ -7,22 +7,28 @@ img
     box-shadow: 5px 5px 5px #89CFF0 inset;
 }
 
-p
+label
 {
     text-shadow: 0.5px 0.5px 1.5px white;
 }
 
-#Choice1
+#Whoami
 {
-    box-shadow: 5px 5px 5px #89CFF0 inset;
+    width: 200px;
 }
 
-#Choice2
+#Age
 {
-    box-shadow: 5px 5px 5px #89CFF0 inset;
+    width: 100px;
 }
 
-#Choice3
+.expandingArea
 {
-    box-shadow: 5px 5px 5px #89CFF0 inset;
+    position: relative;
+}
+
+.Center
+{
+    text-align: center;
+    padding-top: 10px;
 }

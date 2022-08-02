@@ -11,22 +11,25 @@
         <!-- Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <!-- Javascripts   Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
-    <title>&#9829; Top3 &#9829;</title>
+    <title>&#9829; Feedback &#9829;</title>
     <!--Reference to CSS-->
     <link href="../CSS/Common.css" rel="stylesheet" />
+    <link href="../CSS/Feedback.css" rel="stylesheet" />
+    <!--Reference to Javascript-->
+    <script src="../Javascript/Feedback.js"></script>
 </head>
 
 <body>
     <!--Title-->
-    <div class="container-fluid text-center h1 bg-dark">&#9829; Top 3 Career Choices &#9829;</div>
+    <div class="container-fluid text-center h1 bg-dark">&#9829; Feedback Form &#9829;</div>
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg navbar-light" id="Navbar">
         <div class="container-fluid">
             <a class="navbar-brand"><img src="../Images/Keebe.gif" alt="Source: https://makesweet.com/my/heart-locket#"
-                width="50" height="50"></a>
+                width="65" height="55"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -45,17 +48,19 @@
     </nav>
 
 <!--Current Experience and Details-->   
-<div class="Feedback_Container">
+<div class="container">
     <div class="Intro row">
         <div class="col-md-12 bg-dark">
-            <label for="status"><b>Who are you:</b></label>
-            <select name="status" id="status">
-                <option value="student">student</option>
-                <option value="staff">Staff</option>
-                <option value="alumni">Alumni</option>
-            </select>
-            <br>
+            <label><b>Who are you:</b></label>
+            <select class="form-select form-select" id="Whoami" aria-label="Small select">
+                <option selected="">Pick a choice</option>
+                <option value="1">Student</option>
+                <option value="2">Staff</option>
+                <option value="3">Alumni</option>
+              </select>
         </div>
+
+        <br>
 
         <div class="col-md-12 bg-dark">
             <br>
@@ -64,24 +69,30 @@
             <input type="range" id="o-range" name="o-range" min="1" max="5" value="3">
         </div>
 
+        <br><br>
+
         <div class="col-md-12 bg-dark">
             <br>
-            <label for="age"><b>Enter your age:</b></label>
+            <label for="text"><b>Enter your age:</b></label>
             <br>
-            <input type="number" id="age" placeholder="18" min="1">
+            <!--input type="number" id="age" placeholder="18"-->
+            <input type="number" class="form-control" id="Age" placeholder="18" min="1" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please type in a valid age.</div>
             <br>
         </div>
     
         <br><br>
 
         <div class="col-md-12 bg-dark">
-            <p><b>Please select your Gender:</b></p>
+            <label><b>Please select your Gender:</b></label>
+            <br>
             <input type="radio" id="male" name="gender" value="men">
             <label for="male">Male</label>
-        <br>
+            <br>
             <input type="radio" id="female" name="gender" value="women">
             <label for="female">Female</label>
-        <br>
+            <br>
             <input type="radio" id="others" name="gender" value="others">
             <label for="others">Others</label>
         </div>
@@ -90,53 +101,56 @@
 
         <div class="col-md-12 bg-dark">
             <br>
-            <label for="email"><b>Email address:</b></label>
-        <br>
-            <input type="radio" id="female" name="gender" value="women">
-            <label for="female">Female</label>
-        <br>
-            <input type="radio" id="others" name="gender" value="others">
-            <label for="others">Others</label>
+            <label for="text"><b>Email address:</b></label>
+            <input type="email" class="form-control" placeholder="example@mail.com" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please type in a valid email address.</div>
             <br>
         </div>
         
         <br><br>
+
+        <div class="col-md-12 bg-dark">
+            <br>
+            <!--Allow user to type in-->
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioDefault" id="formRadioChecked">
+                <label class="form-check-label" for="formRadioDefault">Type in feedback here: </label>
+
+                <div class="expandingArea" style="width: 1000px; height: 200px;">
+                    <pre><span></span><br></pre>
+                    <textarea placeholder="Please type in your feedback here."></textarea>
+                </div>
+              </div>
+              <!--Allow form upload-->
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radioDefault" id="formRadioDefault" checked="">
+                <label for="formFile" class="form-label">Upload Feedback</label><input class="form-control" type="file" id="formFile">
+              </div>
+        </div>
+
+        <br><br>
+
+    <div class="col-md-12 bg-dark">
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="myCheck"  name="remember" required>
+            <label class="form-check-label" for="myCheck">I agree on sending this feedback to the necessary parties to read.</label>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Check this checkbox to continue.</div>
+        </div>
+    </div>
+
+        <br><br>
+
+        <div class="col-md-12 bg-dark">
+            <div class="Center">
+                <button type="submit" class="btn btn-primary ">Submit</button>
+            </div>
+        </div>
         
     <div>
-        
-    </div>
-    <div>
-        <input type="email" id="email" name="email address" placeholder="example@mail.com" style="width: 500px;">
-    </div>
-
-    <br>
-
-    <div></div>
-
-    <div>
-        <label for="text"><b>Type in your feedback here:</b></label>
-    </div>
-    <br>
-    <div class="expandingArea" style="width: 1000px; height: 200px;">
-        <pre><span></span><br></pre>
-        <textarea placeholder="Please type in your feedback here."></textarea>
-    </div>
 </div>
-<br>
-    <div class="Center">
-        <form><button onclick="Submission()" style="width: 250px;">Submit</button></form>
-    </div>
-
-
-<!--Programming the button to show a popup saying that the feedback form is submitted-->
-<script>
-    function Submission() {
-        alert("Your feedback form has been submitted!");
-    }
-</script>
-
-    <!--Footer-->
-    <footer class="container-fluid text-center bg-dark">FlufCorp2022&copy; &#9829; Singapore Poly &#9829; 88155466 &#9829;
-    </footer>   
+<!--Footer-->
+<footer class="container-fluid text-center bg-dark">FlufCorp2022&copy; &#9829; Singapore Poly &#9829; 88155466 &#9829;</footer>   
 </body>
 </html>
