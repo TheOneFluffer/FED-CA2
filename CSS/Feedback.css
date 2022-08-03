@@ -22,9 +22,14 @@ label
     width: 100px;
 }
 
-.expandingArea
+#Button
 {
-    position: relative;
+    width: 400px;
+}
+
+#email
+{
+    width: 600px;
 }
 
 .Center

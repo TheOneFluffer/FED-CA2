@@ -23,10 +23,10 @@
 </head>
 
 <body>
-    <!--Title-->
-    <div class="container-fluid text-center h1 bg-dark">&#9829; Feedback Form &#9829;</div>
-    <!--Navigation Bar-->
-    <nav class="navbar navbar-expand-lg navbar-light" id="Navbar">
+<!--Title-->
+<div class="container-fluid text-center h1 bg-dark">&#9829; Feedback Form &#9829;</div>
+<!--Navigation Bar-->
+<nav class="navbar navbar-expand-lg navbar-light" id="Navbar">
         <div class="container-fluid">
             <a class="navbar-brand"><img src="../Images/Keebe.gif" alt="Source: https://makesweet.com/my/heart-locket#"
                 width="65" height="55"></a>
@@ -45,11 +45,11 @@
                 </div>
             </div>
         </div>
-    </nav>
+</nav>
 
 <!--Current Experience and Details-->   
 <div class="container">
-    <div class="Intro row">
+    <div class="Feedback row">
         <div class="col-md-12 bg-dark">
             <label><b>Who are you:</b></label>
             <select class="form-select form-select" id="Whoami" aria-label="Small select">
@@ -57,7 +57,7 @@
                 <option value="1">Student</option>
                 <option value="2">Staff</option>
                 <option value="3">Alumni</option>
-              </select>
+            </select>
         </div>
 
         <br>
@@ -75,81 +75,53 @@
             <br>
             <label for="text"><b>Enter your age:</b></label>
             <br>
-            <!--input type="number" id="age" placeholder="18"-->
-            <input type="number" class="form-control" id="Age" placeholder="18" min="1" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please type in a valid age.</div>
+            <input type="number" class="form-control" id="Age" placeholder="18" min="1">
             <br>
         </div>
-    
+
         <br><br>
 
         <div class="col-md-12 bg-dark">
             <label><b>Please select your Gender:</b></label>
             <br>
-            <input type="radio" id="male" name="gender" value="men">
-            <label for="male">Male</label>
-            <br>
-            <input type="radio" id="female" name="gender" value="women">
-            <label for="female">Female</label>
-            <br>
-            <input type="radio" id="others" name="gender" value="others">
-            <label for="others">Others</label>
-        </div>
-
-        <br><br>
-
-        <div class="col-md-12 bg-dark">
-            <br>
-            <label for="text"><b>Email address:</b></label>
-            <input type="email" class="form-control" placeholder="example@mail.com" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please type in a valid email address.</div>
-            <br>
-        </div>
-        
-        <br><br>
-
-        <div class="col-md-12 bg-dark">
-            <br>
-            <!--Allow user to type in-->
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioDefault" id="formRadioChecked">
-                <label class="form-check-label" for="formRadioDefault">Type in feedback here: </label>
-
-                <div class="expandingArea" style="width: 1000px; height: 200px;">
-                    <pre><span></span><br></pre>
-                    <textarea placeholder="Please type in your feedback here."></textarea>
-                </div>
-              </div>
-              <!--Allow form upload-->
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="radioDefault" id="formRadioDefault" checked="">
-                <label for="formFile" class="form-label">Upload Feedback</label><input class="form-control" type="file" id="formFile">
-              </div>
+                <input class="form-check-input" type="radio" name="gender">
+                <label class="form-check-label" for="formRadioDefault">Male</label>
+            </div>
+            
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender">
+                <label class="form-check-label" for="formRadioDefault">Female</label>
+            </div>
+    
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender">
+                <label class="form-check-label" for="formRadioDefault">Others</label>
+            </div>
         </div>
-
-        <br><br>
-
-    <div class="col-md-12 bg-dark">
-        <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" id="myCheck"  name="remember" required>
-            <label class="form-check-label" for="myCheck">I agree on sending this feedback to the necessary parties to read.</label>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Check this checkbox to continue.</div>
-        </div>
-    </div>
 
         <br><br>
 
         <div class="col-md-12 bg-dark">
-            <div class="Center">
-                <button type="submit" class="btn btn-primary ">Submit</button>
+            <br>
+            <div class="mb-3 mt-3">
+                <label for="email" class="form-label">Email address:</label>
+                <input type="text" class="form-control" id="email" placeholder="name@example.com" name="uname" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
             </div>
         </div>
         
-    <div>
+        <br><br>
+        <!--This one contains errors-->
+        <div class="col-md-12 bg-dark">  
+        <label for="text" class="form-label">Type in Feedback here: </label>
+        <div class="form">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px"></textarea>
+        </div>
+    </div>
 </div>
+
 <!--Footer-->
 <footer class="container-fluid text-center bg-dark">FlufCorp2022&copy; &#9829; Singapore Poly &#9829; 88155466 &#9829;</footer>   
 </body>
