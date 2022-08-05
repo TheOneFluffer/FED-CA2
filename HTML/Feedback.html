@@ -49,77 +49,127 @@
 
 <!--Current Experience and Details-->   
 <div class="container">
-    <div class="Feedback row">
-        <div class="col-md-12 bg-dark">
-            <label><b>Who are you:</b></label>
-            <select class="form-select form-select" id="Whoami" aria-label="Small select">
-                <option selected="">Pick a choice</option>
-                <option value="1">Student</option>
-                <option value="2">Staff</option>
-                <option value="3">Alumni</option>
-            </select>
-        </div>
+    <form onsubmit="Submission()">
+        <div class="Feedback row">
+            
+            <div class="col-md-12 bg-dark">
+                <label><b>Who are you:</b></label>
+                <select class="form-select form-select" id="Whoami" aria-label="Small select">
+                    <option selected="">Pick a choice</option>
+                    <option value="1">Student</option>
+                    <option value="2">Staff</option>
+                    <option value="3">Alumni</option>
+                </select>
+            </div>
 
-        <br>
+            <br>
 
-        <div class="col-md-12 bg-dark">
-            <br>
-            <label><b>Satisfaction (between 1 to 5):</b></label>
-            <br>
-            <input type="range" id="o-range" name="o-range" min="1" max="5" value="3">
-        </div>
+            <div class="col-md-12 bg-dark">
+                <br>
+                <label class="form-label"><b>Satisfaction (between 1 to 5):</b></label>
+                <br>
+                <input type="range" class="form-range" min="1" max="5" step="1" value="3" id="o-range">
+            </div>
 
-        <br><br>
+            <br><br>
 
-        <div class="col-md-12 bg-dark">
-            <br>
-            <label for="text"><b>Enter your age:</b></label>
-            <br>
-            <input type="number" class="form-control" id="Age" placeholder="18" min="1">
-            <br>
-        </div>
+            <div class="col-md-12 bg-dark">
+                <br>
+                <label><b>Enter your age:</b></label>
+                <br>
+                <input type="number" class="form-control" id="Age" placeholder="18" min="1">
+                <br>
+            </div>
 
-        <br><br>
+            <br><br>
 
-        <div class="col-md-12 bg-dark">
-            <label><b>Please select your Gender:</b></label>
-            <br>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender">
-                <label class="form-check-label" for="formRadioDefault">Male</label>
+            <div class="col-md-12 bg-dark">
+                <label><b>Please select your Gender:</b></label>
+                <br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender">
+                    <label>Male</label>
+                </div>
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender">
+                    <label>Female</label>
+                </div>
+        
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender">
+                    <label>Others</label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="col-md-12 bg-dark">
+                <br>
+                <label  class="form-label"><b>Type in your Email:</b></label>
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label>Email address</label>
+                </div>
             </div>
             
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender">
-                <label class="form-check-label" for="formRadioDefault">Female</label>
-            </div>
-    
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender">
-                <label class="form-check-label" for="formRadioDefault">Others</label>
-            </div>
-        </div>
+            <br><br>
 
-        <br><br>
+            <div class="col-md-12 bg-dark">
+                <br>
+                <label  class="form-label"><b>Type in your feedback here:</b></label>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Feedback" id="FeedbackArea" style="height: 150px"></textarea>
+                    <label>Comments</label>
+                </div>
+            </div>
 
-        <div class="col-md-12 bg-dark">
-            <br>
-            <div class="mb-3 mt-3">
-                <label for="email" class="form-label">Email address:</label>
-                <input type="text" class="form-control" id="email" placeholder="name@example.com" name="uname" required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+            <br><br>
+
+            <div class="col-md-12 bg-dark">
+                <br>
+                <label class="form-label">Click on 1 or more programming languages you know: </label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="formCheckDefault">
+                    <label>C</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="2">
+                    <label>C++</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="3">
+                    <label>JavaScript</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="4">
+                    <label>Java</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="5">
+                    <label>HTML</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="6">
+                    <label>Python</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="7">
+                    <label>Perl</label>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="col-md-12 bg-dark">
+                <br>
+                <div class="Center">
+                    <button type="submit" value="submit" id="Button" class="btn btn-outline-light">Submit</button>
+                </div>
+                <br>
             </div>
         </div>
-        
-        <br><br>
-        <!--This one contains errors-->
-        <div class="col-md-12 bg-dark">  
-        <label for="text" class="form-label">Type in Feedback here: </label>
-        <div class="form">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px"></textarea>
-        </div>
-    </div>
+    </form>
 </div>
 
 <!--Footer-->
